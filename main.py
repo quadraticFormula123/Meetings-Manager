@@ -14,7 +14,7 @@ window.mainloop() #displays our window
 
 #label - an area widget that holds a text and/or an image within a window
 
-another_meeting = input("Do you want to add a/another meeting?")
+another_meeting = input("Do you want to add a/anotfher meeting?")
 
 meetings = []
 while (another_meeting.lower() == "yes"):
