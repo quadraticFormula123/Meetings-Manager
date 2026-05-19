@@ -5,10 +5,14 @@ from tkinter import * #imports all avaliable stuff in tkinter
 
 window = Tk() #place window on computer screen, listens for events
 window.geometry("520x520")#changes window size
-window.title("Meetings Manager")
-softwareIcon = PhotoImage('softwareIcon.png')
-window.iconphoto(True, softwareIcon)
+window.title("Meetings Manager") #setting the window title
+softwareIcon = PhotoImage('softwareIcon.png') #turning our png image into a photoImage and storing in softwareIcon
+window.iconphoto(True, softwareIcon) #giving our window softwareIcon as its iconphoto
+titleLabel = Label(window,text="Description...")
+titleLabel.pack()#actually packs our label into the window
 window.mainloop() #displays our window
+
+#label - an area widget that holds a text and/or an image within a window
 
 another_meeting = input("Do you want to add a/another meeting?")
 
@@ -43,5 +47,5 @@ while (1==1):
                     webbrowser.open_new_tab(meeting["url"])
                     time.sleep(60)
     time.sleep(1)
-    
-        
+
+
