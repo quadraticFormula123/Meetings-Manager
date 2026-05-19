@@ -47,5 +47,3 @@ while (1==1):
                     webbrowser.open_new_tab(meeting["url"])
                     time.sleep(60)
     time.sleep(1)
-
-
