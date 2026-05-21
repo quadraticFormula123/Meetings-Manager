@@ -43,7 +43,7 @@ function createPopupContents() {
     meetingName.style.borderRadius = "4px"
     meetingName.style.border = "1px solid #ccc"
     meetingName.style.padding = "8px"
-    meetingName.style.width = "100%"
+    meetingName.style.width = "75%"
 
     // Meeting URL field
     const urlTag = document.createElement("p")
@@ -53,7 +53,7 @@ function createPopupContents() {
     urlInput.style.borderRadius = "4px"
     urlInput.style.border = "1px solid #ccc"
     urlInput.style.padding = "8px"
-    urlInput.style.width = "100%"
+    urlInput.style.width = "75%"
 
     // Date field (YYYY/MM/DD) - text input for manual date format entry
     const dateTag = document.createElement("p")
@@ -64,17 +64,20 @@ function createPopupContents() {
     dateInput.style.borderRadius = "4px"
     dateInput.style.border = "1px solid #ccc"
     dateInput.style.padding = "8px"
-    dateInput.style.width = "100%"
+    dateInput.style.width = "75%"
 
-    // Time field (24-hour, e.g., 15:16) - using type=time enforces 24-hour input in most browsers
+    // Time field (24-hour, e.g., 15:16) - text input for manual time format entry
     const timeTag = document.createElement("p")
     timeTag.textContent = "Meeting Time (24-hour HH:MM)"
     const timeInput = document.createElement("input")
-    timeInput.type = "time"
+    timeInput.type = "text"
+    timeInput.placeholder = "15:16"
     timeInput.style.borderRadius = "4px"
     timeInput.style.border = "1px solid #ccc"
     timeInput.style.padding = "8px"
-    timeInput.style.width = "100%"
+    timeInput.style.width = "75%"
+
+
 
     // Append elements to the popup container
     newMeetingInfoDiv.appendChild(closeBtn)
