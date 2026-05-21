@@ -42,7 +42,7 @@ function createPopupContents() {
     meetingName.placeholder = "Meeting name . . . "
     meetingName.style.borderRadius = "4px"
     meetingName.style.border = "1px solid #ccc"
-    meetingName.style.padding = "8px"
+    meetingName.style.padding = "1px"
     meetingName.style.width = "75%"
 
     // Meeting URL field
@@ -77,6 +77,26 @@ function createPopupContents() {
     timeInput.style.padding = "8px"
     timeInput.style.width = "75%"
 
+    const submitBtn = document.createElement("button")
+    submitBtn.textContent = "Submit"
+    submitBtn.style.padding = "10px"
+    submitBtn.style.border = "none"
+    submitBtn.style.backgroundColor = "#007bff" 
+    submitBtn.style.color = "white"              
+    submitBtn.style.cursor = "pointer"           
+    submitBtn.style.borderRadius = "4px"        
+    submitBtn.style.marginTop = "15px"           
+    submitBtn.style.width = "75%"
+    submitBtn.style.display = "block"
+    submitBtn.style.margin = "15px auto 0 auto"    
+    submitBtn.style.transition = "transform 0.1s ease"
+    submitBtn.addEventListener("mousedown", () => {
+        submitBtn.style.transform = "scale(0.95)"
+    })
+    submitBtn.addEventListener("mouseup", () => {
+        submitBtn.style.transform = "scale(1)"
+    })
+
 
 
     // Append elements to the popup container
@@ -93,7 +113,8 @@ function createPopupContents() {
     newMeetingInfoDiv.appendChild(document.createElement("br"))
     newMeetingInfoDiv.appendChild(timeTag)
     newMeetingInfoDiv.appendChild(timeInput)
-
+    newMeetingInfoDiv.appendChild(document.createElement("br"))
+    newMeetingInfoDiv.appendChild(submitBtn)
     // Basic popup sizing and look
     newMeetingInfoDiv.style.backgroundColor = "#f7f7f7"
     newMeetingInfoDiv.style.width = "420px"
